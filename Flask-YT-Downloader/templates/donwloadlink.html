@@ -1,0 +1,24 @@
+<!DOCTYPE html> 
+  
+<html> 
+<head> 
+    <title>For loop in Flask</title> 
+</head> 
+<body> 
+  
+<ol> 
+<!-- For loop logic of jinja template -->
+{%for i in range(0, len)%} 
+  
+    <li>{{Pokemons[i]}}</li> 
+{%endfor%} 
+  
+</ol> 
+<form action = "http://localhost:5000/download" method = "POST">
+    <p>Enter Choice:</p>
+    <p><input type = "number" name = "choice" max="{{ len }}"/></p>
+    <p><input type = "text" name="url" value="{{ urltogo }}" readonly></p>
+    <p><input type = "submit" value = "submit" /></p>
+ </form>    
+</body> 
+</html> 
